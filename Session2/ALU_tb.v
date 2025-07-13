@@ -29,7 +29,7 @@ Endtask
 initial begin
    A=0;B=0;opcode=0;enable=1;
    #10;
-   repeat(4) begin
+   repeat(100)begin
        A = $random ;
        B = $random ; 
        opcode = $random ;
