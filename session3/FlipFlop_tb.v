@@ -45,7 +45,7 @@ initial begin
     rst=1;
     repeat(100) begin
         clk = ~clk; 
-        D = $random; 
+        D = $random(); 
         #10;
         testflipflop();
     end

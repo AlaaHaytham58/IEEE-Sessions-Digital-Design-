@@ -8,7 +8,7 @@ module stateff
 );
 parameter FF_TYPE = "DFF";
 if (FF_TYPE == "DFF") begin
-    always @(negedge clk or negedge rst) begin
+    always @(negedge clk ) begin
         if (rst == 0) begin
             Q <= 0; 
             Qn <= 1; 
@@ -18,7 +18,7 @@ if (FF_TYPE == "DFF") begin
         end
     end
 end else if (FF_TYPE == "TFF") begin
-    always @(negedge clk or negedge rst) begin
+    always @(negedge clk) begin
         if (rst == 0) begin
             Q <= 0; 
             Qn <= 1;
@@ -28,5 +28,4 @@ end else if (FF_TYPE == "TFF") begin
         end
     end
 end 
-
 endmodule
